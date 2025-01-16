@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: student
+
+  # Configuration MongoDB
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/projet_ms_student
+      database: projet_ms_student
+
+  # Exclure la configuration automatique des bases relationnelles
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+logging:
+  level:
+    org.springframework.data.mongodb.core: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8082
