@@ -40,7 +40,7 @@ public class AuthServiceImpl implements AuthService {
                 .setSubject(foundUser.getUsername())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 86400000)) // 1 day expiration
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY.)
+                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
                 .compact();
     }
 }
